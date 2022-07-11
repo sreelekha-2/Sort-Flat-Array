@@ -20,7 +20,7 @@ console.log(arr2.flat(4));
 //using recursion
 function flatten(arr2) {
   const newArr = arr2.reduce((acc, curr) => {
-    if (typeof curr === 'object') {
+    if (Array.isArray(curr)) {
       return acc.concat(flatten(curr));
     }
     return acc.concat(curr);
