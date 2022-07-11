@@ -4,6 +4,9 @@ const arr = [3, 8, 7, 6, 5, -4, 3, 2, 1];
 const ascendingOrderSortedArr = arr.sort();
 console.log(ascendingOrderSortedArr);
 
+const doubleDigitNums = [24, 39, 12, -40, 97, -15];
+console.log(doubleDigitNums.sort());
+
 const descendingOrderSortedArr = arr.sort().reverse();
 console.log(descendingOrderSortedArr);
 
