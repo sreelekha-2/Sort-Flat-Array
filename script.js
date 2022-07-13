@@ -11,21 +11,19 @@ const arr = [3, 8, 7, 6, 5, -4, 3, 2, 1];
 // console.log(descendingOrderSortedArr);
 
 let sortedArr = [];
-let length = arr.length;
-arr.forEach((item) => {
-  console.log(item);
-  let max = item;
-  for (let i = 0; i < 10; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
+while (arr.length !== 0) {
+  let max = arr[0];
+  for (let num of arr) {
+    if (num > max) {
+      max = num;
     }
   }
-
   sortedArr.push(max);
   arr.splice(arr.indexOf(max), 1);
-});
+}
 console.log(sortedArr);
 
+console.log(arr);
 const arr2 = [
   [1, 2, 1, 24],
   [8, [11, [9, [1, 7], 2], 4]],
