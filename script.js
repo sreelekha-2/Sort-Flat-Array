@@ -1,16 +1,31 @@
 console.log('Hello!');
 
 const arr = [3, 8, 7, 6, 5, -4, 3, 2, 1];
-const ascendingOrderSortedArr = arr.sort();
-console.log(ascendingOrderSortedArr);
+// const ascendingOrderSortedArr = arr.sort();
+// console.log(ascendingOrderSortedArr);
 
-const doubleDigitNums = [24, 39, 12, -40, 97, -15];
-console.log(doubleDigitNums.sort());
+// const doubleDigitNums = [24, 39, 12, -40, 97, -15];
+// console.log(doubleDigitNums.sort());
 
-const descendingOrderSortedArr = arr.sort().reverse();
-console.log(descendingOrderSortedArr);
+// const descendingOrderSortedArr = arr.sort().reverse();
+// console.log(descendingOrderSortedArr);
 
-console.log(arr);
+let sortedArr = [];
+let length = arr.length;
+arr.forEach((item) => {
+  console.log(item);
+  let max = item;
+  for (let i = 0; i < 10; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+
+  sortedArr.push(max);
+  arr.splice(arr.indexOf(max), 1);
+});
+console.log(sortedArr);
+
 const arr2 = [
   [1, 2, 1, 24],
   [8, [11, [9, [1, 7], 2], 4]],
